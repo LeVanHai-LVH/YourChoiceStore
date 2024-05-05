@@ -1,0 +1,104 @@
+div {
+    height: 4rem;
+    width: 100%;
+    background-color: #00d1d8;
+  
+    & > div {
+      display: flex;
+  
+      align-items: center;
+  
+      width: 100%;
+  
+      & > .logo {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+      }
+      & > .search {
+        width: 60%;
+  
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+  
+        padding: 0 0.5rem 0 0;
+        & > .search-one {
+          height: 2.5rem;
+          width: 100%;
+          display: flex;
+          background-color: #ffff;
+          border-radius: 3rem;
+          padding: 0 0.5rem 0 0.5rem;
+          & > input {
+            outline: none;
+            border: none;
+            width: 100%;
+  
+            font-size: 1rem;
+            font-weight: 00;
+  
+            color: #696969;
+          }
+        }
+      }
+      & > .cart {
+        position: relative;
+  
+        width: 10%;
+        height: 100%;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > svg:hover {
+          cursor: pointer;
+          & > path {
+            fill: #ffd700;
+          }
+        }
+        & > .quantity {
+          position: absolute;
+          height: 1rem;
+          width: 1rem;
+          top: 0.9rem;
+          left: 55%;
+          background-color: #ffff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > p {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: red;
+          }
+        }
+      }
+      & > .user-authentication {
+        width: 15%;
+  
+        display: flex;
+        justify-content: center;
+        & > .avatar {
+          width: 0;
+        }
+        & > .authentication {
+          display: flex;
+          column-gap: 0.3rem;
+          & > p {
+            font-family: sans-serif;
+            font-weight: 700;
+            color: #ffff;
+          }
+  
+          & > p:hover {
+            color: #ffd700;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
