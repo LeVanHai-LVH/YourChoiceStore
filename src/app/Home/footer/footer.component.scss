@@ -1,0 +1,155 @@
+.footer-container{
+    width: 100%;
+    height: 18rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &>.container-one{
+        width: 1024px;
+        height: 18rem;
+
+        display: flex;
+
+        padding-bottom: 2rem;
+        
+        &>.logo{
+            width: 30%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        &>.brand-footer{
+            width: 50%;
+            height: 100%;
+
+            padding-top: 1rem;
+
+            &>.title{
+                height: 3rem;
+                width: 1024px;
+    
+                display: flex;
+                align-items: center;
+                justify-content: start;
+    
+                background-color: #ffff;
+    
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    margin-left: 1rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.5rem;
+                    width: 0.2rem;
+    
+                    top: 25%;
+                    left: 0;
+    
+                    background-color: #79CDCD;
+                }
+            }
+            &>.list-brand{
+                display: flex; 
+                justify-content: start;
+                flex-wrap: wrap;
+                &>.card-brand{
+                    display: flex;
+                    justify-content: center;
+                    width: 165px;
+                    border: 1px solid #ffff;
+                    border-radius: 0.3rem;
+                   
+                }
+                &>.card-brand:hover{
+                    border: 1px solid #B5B5B5;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &>.about-me-footer{
+            width: 20%;
+            height: 100%;
+
+            padding-top: 1rem;
+
+            &>.title{
+                height: 3rem;
+                width: 1024px;
+    
+                display: flex;
+                align-items: center;
+                justify-content: start;
+    
+                background-color: #ffff;
+    
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    margin-left: 1rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.5rem;
+                    width: 0.2rem;
+    
+                    top: 25%;
+                    left: 0;
+    
+                    background-color: #79CDCD;
+                }
+            }
+            &>.list-about-me{
+                padding: 0 0 0 1rem;
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.5rem;
+                &>p{
+                    display: flex;
+                    align-items: center;
+
+                    &>span{
+                        margin-right: 0.5rem;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                &>p:hover{
+                    color: #79CDCD;
+                    cursor: pointer;
+                    &>span{
+
+                    }
+                }
+            }
+        }
+        
+    }
+    &>.container-two{
+        border-top: 1px solid #B5B5B5;
+
+        height: 15rem;
+        width: 1024px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+}

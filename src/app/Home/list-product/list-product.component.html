@@ -1,1 +1,20 @@
-<p>list-product works!</p>
+<div class="list-product-container">
+    <div class="container">
+        <div class="title">
+            <p>Danh sách gợi ý</p>
+            <div class="rectango">
+
+            </div>
+        </div>
+        <div class="list-product" >
+            <div class="list" *ngFor="let item of [].constructor(12)">
+                <app-product ></app-product>
+            </div>
+        </div>
+        <div class="more">
+            <div class="button-more">
+                <p>Xem tất cả</p>
+            </div>
+        </div>
+    </div>
+</div>

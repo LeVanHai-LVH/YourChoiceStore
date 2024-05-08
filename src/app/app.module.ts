@@ -7,15 +7,21 @@ import { NavbarComponent } from './Home/navbar/navbar.component';
 import { BodyHomePageComponent } from './Home/body-home-page/body-home-page.component';
 import { FooterComponent } from './Home/footer/footer.component';
 import { ListProductComponent } from './Home/list-product/list-product.component';
+import { BannerComponent } from './Home/banner/banner.component';
+import { BrandComponent } from './Home/brand/brand.component';
+import { ProductComponent } from './Home/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    NavbarComponent,
     BodyHomePageComponent,
     FooterComponent,
-    ListProductComponent
+    ListProductComponent,
+    NavbarComponent,
+    BannerComponent,
+    BrandComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule
