@@ -138,3 +138,163 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .navbar-container{
+    width: 100%;
+    background-color: #79CDCD;
+    display: flex;
+    justify-content: center;
+
+
+    &>.container{
+      height: 6.4rem;
+      width: 100%;
+      
+      display: flex;
+      align-items: center;
+      column-gap: 0.2rem;
+  
+      &>.logo{
+        display: flex;
+        justify-content: center;
+        width: 15%;
+        cursor: pointer;
+
+        &>svg{
+          height: 3rem;
+          width: 3rem;
+        }
+
+      }
+      &>.search{
+        width: 55%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        &>.row-search{
+          height: 2rem;
+          background-color: #ffff;
+          border-radius: 2rem;
+  
+          display: flex;
+          align-items: center;
+  
+          padding: 0.3rem 0.5rem 0.3rem 1rem;
+          &>input{
+            outline: none;
+            border: none;
+  
+            width: 93%;
+            height: 2rem;
+  
+            font-size: 1.5rem;
+            color: #696969;
+          }
+          &>svg{
+            &>path{
+              fill: #79CDCD;
+  
+            }
+  
+          }
+          &>svg:hover{
+            cursor: pointer;
+            &>path{
+              fill: #FFC125;
+  
+            }
+  
+          }
+  
+        }
+      }
+      &>.cart{
+        width: 10%;
+        height: 100%;
+        &>.box-cart{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          
+          &>svg{
+            &>path{
+              fill: #ffff;
+  
+            }
+  
+          }
+          &>svg:hover{
+            cursor: pointer;
+            &>path{
+              fill: #FFC125;
+  
+            }
+  
+          }
+  
+          &>.quantity{
+            position: absolute;
+            top: 25%;
+            left: 60%;
+  
+            height: 20px;
+            width: 20px;
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            background-color: #fff;
+  
+            border-radius: 50%;
+  
+            &>p{
+              font-size: 1.2rem;
+              color: #EE0000;
+              font-weight: 600;
+            }
+          }
+        }
+  
+  
+      }
+      &>.authentication{
+        width: 20%;
+        height: 100%;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        &>.avatar{
+          
+        &>svg{
+          height: 2rem;
+          width: 2rem;
+        }
+        } 
+        &>.authen{
+          display: flex;
+          column-gap: 0.5rem;
+  
+          &>p{
+            font-size: 1.2rem;
+            font-weight: 550;
+  
+            color: #ffff;
+          }
+          &>p:hover{
+            color: #FFC125;
+            cursor: pointer;
+          }
+        }
+  
+  
+      }
+    }
+  }
+}

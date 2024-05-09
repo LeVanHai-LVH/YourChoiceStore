@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
+    
 
 }

@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+    .body-container{
+        &>.container{
+            &>.banner{
+
+            }
+            &>.brand{
+
+            }
+            &>.list-product {
+                
+            }
+        }
+    }
+}

@@ -1,89 +1,199 @@
-.list-product-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
 
-    background-color: #f5f5f5;
 
-    &>.container{
-        width: 1024px;
-        padding: 1rem;
-        &>.title{
-            height: 3rem;
+@media only screen and (min-width: 1000px) {
+    .list-product-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+        background-color: #f5f5f5;
+    
+        &>.container{
             width: 1024px;
-
-            display: flex;
-            align-items: center;
-            justify-content: start;
-
-            background-color: #ffff;
-
-            // padding-left: 1rem;
-
-            position: relative;
-
-            &>p{
-                font-weight: 700;
-                font-size: 1.2rem;
-                margin-left: 1rem;
-            }
-            &>.rectango{
-                position: absolute;
-                height: 1.5rem;
-                width: 0.2rem;
-
-                top: 25%;
-                left: 0;
-
-                background-color: #79CDCD;
-            }
-        }
-        &>.list-product{
-            padding: 0.1rem 0 0 0;
-            display: flex;
-            flex-wrap: wrap;
-
-            row-gap: 0.1rem;
-            column-gap: 0.1rem;
-            
-
-            &>.list{
-                display: flex;
-
-                border: 1px solid #ffff;
-                cursor: pointer;
-            }
-            &>.list:hover{
-                border: 1px solid #d8d8d8;
-            }
-            
-        }
-        &>.more{
-            height: 6rem;
-            width: 100%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &>.button-more{
-                height:2rem;
-                width: 6rem;
-
-                background-color: #ffff;
-
+            padding: 1rem;
+            &>.title{
+                height: 3rem;
+                width: 1024px;
+    
                 display: flex;
                 align-items: center;
+                justify-content: start;
+    
+                background-color: #ffff;
+    
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    margin-left: 1rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.5rem;
+                    width: 0.2rem;
+    
+                    top: 25%;
+                    left: 0;
+    
+                    background-color: #79CDCD;
+                }
+            }
+            &>.list-product{
+                padding: 0.1rem 0 0 0;
+                display: flex;
+                flex-wrap: wrap;
+    
+                row-gap: 0.1rem;
+                column-gap: 0.1rem;
+                
+    
+                &>.list{
+                    display: flex;
+    
+                    border: 1px solid #ffff;
+                    cursor: pointer;
+                }
+                &>.list:hover{
+                    border: 1px solid #d8d8d8;
+                }
+                
+            }
+            &>.more{
+                height: 6rem;
+                width: 100%;
+    
+                display: flex;
                 justify-content: center;
-
-                border-radius: 0.2rem;
+                align-items: center;
+                &>.button-more{
+                    height:2rem;
+                    width: 6rem;
+    
+                    background-color: #ffff;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    border-radius: 0.2rem;
+                }
+                &>.button-more:hover{
+                    cursor: pointer;
+                    background-color: #79CDCD;
+                    color: #ffff;
+                }
             }
-            &>.button-more:hover{
-                cursor: pointer;
-                background-color: #79CDCD;
-                color: #ffff;
-            }
+    
         }
-
+    
     }
+}
 
+@media only screen and (max-width: 600px) {
+    .list-product-container{
+        width: 100%;
+        height: auto;        
+        display: flex;
+        justify-content: center;
+    
+        background-color: #f5f5f5;
+    
+        &>.container{
+            width: 100%;
+            height: auto;
+            padding: 0 0.3rem 0 0.3rem;
+            &>.title{
+                height: 2rem;
+                width: 100%;
+    
+                display: flex;
+                align-items: center;
+                justify-content: start;
+    
+                background-color: #ffff;
+    
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    margin-left: 0.5rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.5rem;
+                    width: 0.2rem;
+    
+                    top: 12.5%;
+                    left: 0;
+    
+                    background-color: #79CDCD;
+                }
+            }
+            &>.list-product{
+                padding: 0.1rem 0 0 0;
+                display: flex;
+                flex-wrap: wrap;
+    
+                row-gap: 0.1rem;
+                column-gap:0.1rem;
+                
+    
+                &>.list{
+                    display: flex;
+                    width: 32.6%;
+    
+                    cursor: pointer;
+
+                    border: 11px;
+                    border: 1px solid #ffff;
+
+                    &>.app-product{
+                        width: 100%;
+                    }
+                }
+                &>.list:hover{
+                    border: 1px solid #d8d8d8;
+                }
+
+                
+            }
+            &>.more{
+                height: 4rem;
+                width: 100%;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &>.button-more{
+                    height:1.5rem;
+                    width: 6rem;
+    
+                    background-color: #ffff;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    border-radius: 0.2rem;
+
+                    &>p{
+                        font-size: 0.8rem;
+                    }
+                }
+                &>.button-more:hover{
+                    cursor: pointer;
+                    background-color: #79CDCD;
+                    color: #ffff;
+                }
+            }
+    
+        }
+    
+    }
 }

@@ -1,155 +1,333 @@
-.footer-container{
-    width: 100%;
-    height: 18rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    &>.container-one{
-        width: 1024px;
+@media only screen and (min-width: 1000px) {
+    .footer-container{
+        width: 100%;
         height: 18rem;
-
+    
         display: flex;
-
-        padding-bottom: 2rem;
-        
-        &>.logo{
-            width: 30%;
-            height: 100%;
-
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &>.container-one{
+            width: 1024px;
+            height: 18rem;
+    
             display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        &>.brand-footer{
-            width: 50%;
-            height: 100%;
-
-            padding-top: 1rem;
-
-            &>.title{
-                height: 3rem;
-                width: 1024px;
+    
+            padding-bottom: 2rem;
+            
+            &>.logo{
+                width: 30%;
+                height: 100%;
     
                 display: flex;
                 align-items: center;
-                justify-content: start;
-    
-                background-color: #ffff;
-    
-                // padding-left: 1rem;
-    
-                position: relative;
-    
-                &>p{
-                    font-weight: 700;
-                    font-size: 1.2rem;
-                    margin-left: 1rem;
-                }
-                &>.rectango{
-                    position: absolute;
-                    height: 1.5rem;
-                    width: 0.2rem;
-    
-                    top: 25%;
-                    left: 0;
-    
-                    background-color: #79CDCD;
-                }
+                justify-content: center;
+                cursor: pointer;
             }
-            &>.list-brand{
-                display: flex; 
-                justify-content: start;
-                flex-wrap: wrap;
-                &>.card-brand{
-                    display: flex;
-                    justify-content: center;
-                    width: 165px;
-                    border: 1px solid #ffff;
-                    border-radius: 0.3rem;
-                   
-                }
-                &>.card-brand:hover{
-                    border: 1px solid #B5B5B5;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        &>.about-me-footer{
-            width: 20%;
-            height: 100%;
-
-            padding-top: 1rem;
-
-            &>.title{
-                height: 3rem;
-                width: 1024px;
+            &>.brand-footer{
+                width: 50%;
+                height: 100%;
     
-                display: flex;
-                align-items: center;
-                justify-content: start;
+                padding-top: 1rem;
     
-                background-color: #ffff;
-    
-                // padding-left: 1rem;
-    
-                position: relative;
-    
-                &>p{
-                    font-weight: 700;
-                    font-size: 1.2rem;
-                    margin-left: 1rem;
-                }
-                &>.rectango{
-                    position: absolute;
-                    height: 1.5rem;
-                    width: 0.2rem;
-    
-                    top: 25%;
-                    left: 0;
-    
-                    background-color: #79CDCD;
-                }
-            }
-            &>.list-about-me{
-                padding: 0 0 0 1rem;
-                display: flex;
-                flex-direction: column;
-                row-gap: 0.5rem;
-                &>p{
+                &>.title{
+                    height: 3rem;
+                    width: 1024px;
+        
                     display: flex;
                     align-items: center;
-
-                    &>span{
-                        margin-right: 0.5rem;
-                        display: flex;
-                        align-items: center;
+                    justify-content: start;
+        
+                    background-color: #ffff;
+        
+                    // padding-left: 1rem;
+        
+                    position: relative;
+        
+                    &>p{
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        margin-left: 1rem;
+                    }
+                    &>.rectango{
+                        position: absolute;
+                        height: 1.5rem;
+                        width: 0.2rem;
+        
+                        top: 25%;
+                        left: 0;
+        
+                        background-color: #79CDCD;
                     }
                 }
-                &>p:hover{
-                    color: #79CDCD;
-                    cursor: pointer;
-                    &>span{
-
+                &>.list-brand{
+                    display: flex; 
+                    justify-content: start;
+                    flex-wrap: wrap;
+                    &>.card-brand{
+                        display: flex;
+                        justify-content: center;
+                        width: 165px;
+                        border: 1px solid #ffff;
+                        border-radius: 0.3rem;
+                       
+                    }
+                    &>.card-brand:hover{
+                        border: 1px solid #B5B5B5;
+                        cursor: pointer;
                     }
                 }
             }
-        }
+    
+            &>.about-me-footer{
+                width: 20%;
+                height: 100%;
+    
+                padding-top: 1rem;
+    
+                &>.title{
+                    height: 3rem;
+                    width: 1024px;
         
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+        
+                    background-color: #ffff;
+        
+                    // padding-left: 1rem;
+        
+                    position: relative;
+        
+                    &>p{
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        margin-left: 1rem;
+                    }
+                    &>.rectango{
+                        position: absolute;
+                        height: 1.5rem;
+                        width: 0.2rem;
+        
+                        top: 25%;
+                        left: 0;
+        
+                        background-color: #79CDCD;
+                    }
+                }
+                &>.list-about-me{
+                    padding: 0 0 0 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                    &>p{
+                        display: flex;
+                        align-items: center;
+    
+                        &>span{
+                            margin-right: 0.5rem;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    &>p:hover{
+                        color: #79CDCD;
+                        cursor: pointer;
+                        &>span{
+    
+                        }
+                    }
+                }
+            }
+            
+        }
+        &>.container-two{
+            border-top: 1px solid #B5B5B5;
+    
+            height: 15rem;
+            width: 1024px;
+    
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+    
+        }
     }
-    &>.container-two{
-        border-top: 1px solid #B5B5B5;
-
-        height: 15rem;
-        width: 1024px;
-
+}
+@media only screen and (max-width: 600px) {
+    .footer-container{
+        width: 100%;
+        height: 10rem;
+    
         display: flex;
-        justify-content: space-around;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &>.container-one{
+            width: 100%;
+            height: 8rem;
+    
+            display: flex;
+    
+            padding-bottom: 2rem;
+            
+            &>.logo{
+                width: 20%;
+                height: 100%;
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
 
+                &>svg{
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+            &>.brand-footer{
+                width: 45%;
+                height: 100%;
+    
+                padding-top: 1rem;
+    
+                &>.title{
+                    height: 2rem;
+                    width: 100%;
+        
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+        
+                    background-color: #ffff;
+        
+                    // padding-left: 1rem;
+        
+                    position: relative;
+        
+                    &>p{
+                        font-weight: 700;
+                        font-size: 0.8rem;
+                        margin-left: 1rem;
+                    }
+                    &>.rectango{
+                        position: absolute;
+                        height: 1.5rem;
+                        width: 0.2rem;
+        
+                        top: 15%;
+                        left: 0;
+        
+                        background-color: #79CDCD;
+                    }
+                }
+                &>.list-brand{
+                    display: flex; 
+                    justify-content: start;
+                    flex-wrap: wrap;
+                    &>.card-brand{
+                        display: flex;
+                        justify-content: center;
+                        width: 3.5rem;
+                        height: 2rem;
+                        border: 1px solid #ffff;
+                        border-radius: 0.3rem;
 
+                        &>svg{
+                            width: 3rem;
+                            height: 2rem;
+                        }
+                       
+                    }
+                    &>.card-brand:hover{
+                        border: 1px solid #B5B5B5;
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            &>.about-me-footer{
+                width: 35%;
+                height: 100%;
+    
+                padding-top: 1rem;
+    
+                &>.title{
+                    height: 2rem;
+                    width: 100%;
+        
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+        
+                    background-color: #ffff;
+        
+                    // padding-left: 1rem;
+        
+                    position: relative;
+        
+                    &>p{
+                        font-weight: 700;
+                        font-size: 0.8rem;
+                        margin-left: 1rem;
+                    }
+                    &>.rectango{
+                        position: absolute;
+                        height: 1.5rem;
+                        width: 0.2rem;
+        
+                        top: 15%;
+                        left: 0;
+        
+                        background-color: #79CDCD;
+                    }
+                }
+                &>.list-about-me{
+                    padding: 0 0 0 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                    &>p{
+                        display: flex;
+                        align-items: center;
+                        font-size: 0.7rem;
+    
+                        &>span{
+                            margin-right: 0.5rem;
+                            display: flex;
+                            align-items: center;
+                            &>svg{
+                                height: 0.8rem;
+                                width: 0.8rem;
+                            }
+                        }
+                    }
+                    &>p:hover{
+                        color: #79CDCD;
+                        cursor: pointer;
+                        &>span{
+    
+                        }
+                    }
+                }
+            }
+            
+        }
+        &>.container-two{
+            border-top: 1px solid #B5B5B5;
+    
+            height: 3rem;
+            width: 100%;
+    
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            &>p{
+                font-size: 0.5rem;
+            }
+    
+        }
     }
 }
