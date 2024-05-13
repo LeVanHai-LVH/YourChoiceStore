@@ -1,0 +1,33 @@
+.drowdown-container{
+    width: 17rem;
+    height: auto;
+    background-color: #ffff;
+
+    padding: 1rem;
+
+    border: 2px solid;
+    border-image: linear-gradient(to right, #000000, #ffffff);
+    &>.drowdown{
+        display: flex;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+        flex-wrap: wrap;
+        &>.card-brand{
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #E8E8E8;
+
+            width: 5rem;
+
+            &>svg{
+                height: 2rem;
+                width: 5rem;
+            }
+        }
+        &>.card-brand:hover{
+            border: 1px solid #B5B5B5;
+            cursor: pointer;
+        }
+    }
+}

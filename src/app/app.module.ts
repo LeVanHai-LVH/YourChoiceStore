@@ -10,6 +10,41 @@ import { ListProductComponent } from './Home/list-product/list-product.component
 import { BannerComponent } from './Home/banner/banner.component';
 import { BrandComponent } from './Home/brand/brand.component';
 import { ProductComponent } from './Home/product/product.component';
+import { Router, RouterModule, Routes } from '@angular/router';
+import { ListProductBrandComponent } from './Home/list-product-brand/list-product-brand.component';
+import { ListFilterComponent } from './Home/list-filter/list-filter.component';
+import { DropdownComponent } from './Home/dropdown/dropdown.component';
+import { ProductDetailComponent } from './Home/product-detail/product-detail.component';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: HomePageComponent,
+
+  },
+  {
+    path: 'home',
+    component: BodyHomePageComponent
+  },
+  {
+    path: 'brand/:name',
+    component: ListProductBrandComponent
+  },
+  {
+    path: 'product-detail/:product_name',
+    component: ProductDetailComponent
+  },
+
+  {
+    path: '**',
+    redirectTo: '/home'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -21,10 +56,15 @@ import { ProductComponent } from './Home/product/product.component';
     NavbarComponent,
     BannerComponent,
     BrandComponent,
-    ProductComponent
+    ProductComponent,
+    ListProductBrandComponent,
+    ListFilterComponent,
+    DropdownComponent,
+    ProductDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
