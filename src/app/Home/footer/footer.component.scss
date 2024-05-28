@@ -1,3 +1,6 @@
+@import '../../../SCSS/mixins2';
+@import '../../../SCSS/variables';
+
 @media only screen and (min-width: 1000px) {
     .footer-container{
         width: 100%;
@@ -36,7 +39,7 @@
         
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: flex-start;
         
                     background-color: #ffff;
         
@@ -45,8 +48,8 @@
                     position: relative;
         
                     &>p{
-                        font-weight: 700;
-                        font-size: 1.2rem;
+                        @include text-14-bold;
+                        color: $gray-900;
                         margin-left: 1rem;
                     }
                     &>.rectango{
@@ -62,7 +65,7 @@
                 }
                 &>.list-brand{
                     display: flex; 
-                    justify-content: start;
+                    justify-content: flex-start;
                     flex-wrap: wrap;
                     &>.card-brand{
                         display: flex;
@@ -91,7 +94,7 @@
         
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: flex-start;
         
                     background-color: #ffff;
         
@@ -100,8 +103,8 @@
                     position: relative;
         
                     &>p{
-                        font-weight: 700;
-                        font-size: 1.2rem;
+                        @include text-14-bold;
+
                         margin-left: 1rem;
                     }
                     &>.rectango{
@@ -198,7 +201,7 @@
         
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: flex-start;
         
                     background-color: #ffff;
         
@@ -207,8 +210,8 @@
                     position: relative;
         
                     &>p{
-                        font-weight: 700;
-                        font-size: 0.8rem;
+                        @include text-12-regular;
+
                         margin-left: 1rem;
                     }
                     &>.rectango{
@@ -224,7 +227,7 @@
                 }
                 &>.list-brand{
                     display: flex; 
-                    justify-content: start;
+                    justify-content: flex-start;
                     flex-wrap: wrap;
                     &>.card-brand{
                         display: flex;
@@ -259,7 +262,7 @@
         
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: flex-start;
         
                     background-color: #ffff;
         
@@ -268,8 +271,8 @@
                     position: relative;
         
                     &>p{
-                        font-weight: 700;
-                        font-size: 0.8rem;
+                        @include text-12-regular;
+
                         margin-left: 1rem;
                     }
                     &>.rectango{
@@ -291,7 +294,8 @@
                     &>p{
                         display: flex;
                         align-items: center;
-                        font-size: 0.7rem;
+                        @include text-12-regular;
+
     
                         &>span{
                             margin-right: 0.5rem;
@@ -325,7 +329,8 @@
             align-items: center;
             
             &>p{
-                font-size: 0.5rem;
+                @include text-12-regular;
+
             }
     
         }

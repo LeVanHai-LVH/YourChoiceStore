@@ -1,11 +1,15 @@
-<div class="product-detail-container">
+<!-- <div class="product-detail-container">
     <div class="container">
         <div class="product-name">
             <p>IPhone 15 Pro Max 256GB</p>
             <div class="box-like">
-                <svg width="30" height="30" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg (click)="onClickChageStatusLike()" *ngIf="status == false" width="30" height="30" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.5626 8.83333C9.85477 8.83333 4.41675 14.2714 4.41675 20.9792C4.41675 33.125 18.7709 44.1667 26.5001 46.735C34.2293 44.1667 48.5834 33.125 48.5834 20.9792C48.5834 14.2714 43.1454 8.83333 36.4376 8.83333C32.3301 8.83333 28.6974 10.8727 26.5001 13.9942C25.3801 12.3989 23.8922 11.097 22.1624 10.1986C20.4326 9.30027 18.5118 8.83195 16.5626 8.83333Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                    
+                    </svg> 
+                <svg (click)="onClickChageStatusLike()" *ngIf="status == true" width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z" fill="#F24E1E" stroke="#F24E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                                           
             </div>
         </div>
         <div class="media-product">
@@ -67,11 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="price">
-            <p class="reduced-price">20.000.000<span>₫</span></p>
-            <p class="share">/</p>
-            <p class="unchaged-price">10.000.000<span>₫</span></p>
-          </div>
+
         <div class="payment-box">
             <div class="title">
                 <p>Khuyến mãi khi mua </p>
@@ -79,7 +79,11 @@
     
                 </div>
             </div>
-       
+            <div class="price">
+                <p class="reduced-price">20.000.000<span>₫</span></p>
+                <p class="share">/</p>
+                <p class="unchaged-price">10.000.000<span>₫</span></p>
+              </div>
             <div class="infor-payment">
                 <div class="row-infor">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +113,8 @@
   
             </div>
             <div class="row-button">
-                <div class="button-buy">
-                    <p>Mua ngay</p>
+                <div class="button-buy" (click)="onClickShowPopupAddProductCart()">
+                    <p>Thêm vào giỏ hàng</p>
                 </div>
             </div>
 
@@ -169,4 +173,6 @@
 
         </div>
     </div>
-</div>
+</div> -->
+
+<app-popup-product-system-information></app-popup-product-system-information>

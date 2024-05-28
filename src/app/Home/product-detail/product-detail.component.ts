@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BoxPopupDynamicService } from 'src/app/Dynamic/box-popup-dynamic/box-popup-dynamic.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -6,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit{
+  constructor(
+    private boxPopupDynamicService : BoxPopupDynamicService
+  ){}
+
   ngOnInit(): void {
     console.log(this.list_media[0])
   }
   list_media = ['iphone15','oppo-find-n3-flip','samsung'];
 
   count = 0;
+  status = false;
 
   mainImage = this.list_media[this.count];
 
@@ -55,6 +61,17 @@ export class ProductDetailComponent implements OnInit{
     this.count = value;
     console.log(this.count)
     console.log(value)
+  }
+
+  onClickChageStatusLike():void{
+    this.status = !this.status;
+  }
+
+  onClickShowPopupAddProductCart():void{
+
+    this.boxPopupDynamicService.popupAddProductCart({
+      product_id: 1
+    })
   }
 
 

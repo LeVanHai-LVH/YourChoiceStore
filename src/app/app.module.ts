@@ -15,6 +15,14 @@ import { ListProductBrandComponent } from './Home/list-product-brand/list-produc
 import { ListFilterComponent } from './Home/list-filter/list-filter.component';
 import { DropdownComponent } from './Home/dropdown/dropdown.component';
 import { ProductDetailComponent } from './Home/product-detail/product-detail.component';
+import { BoxPopupDynamicComponent } from './Dynamic/box-popup-dynamic/box-popup-dynamic.component';
+
+import { CartComponent } from './Home/cart/cart.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { ResgisterComponent } from './Auth/resgister/resgister.component';
+import { PopupAddProductCartComponent } from './popup/popup-add-product-cart/popup-add-product-cart.component';
+import { PopupModule } from './popup/popup.module';
+
 
 const appRoutes: Routes = [
   {
@@ -39,7 +47,10 @@ const appRoutes: Routes = [
     path: 'product-detail/:product_name',
     component: ProductDetailComponent
   },
-
+  {
+    path: 'cart',
+    component: CartComponent
+  },
   {
     path: '**',
     redirectTo: '/home'
@@ -60,10 +71,15 @@ const appRoutes: Routes = [
     ListProductBrandComponent,
     ListFilterComponent,
     DropdownComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    BoxPopupDynamicComponent,
+    CartComponent,
+    LoginComponent,
+    ResgisterComponent,
   ],
   imports: [
     BrowserModule,
+    PopupModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

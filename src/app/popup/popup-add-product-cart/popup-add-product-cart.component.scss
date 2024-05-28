@@ -1,0 +1,331 @@
+@import '../../../SCSS/mixins2';
+@import '../../../SCSS/variables';
+
+.container-popup{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 100;
+
+    overflow-y: hidden;
+
+    background-color: rgba(0,0,0,0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &>.container{
+        &>.main-popup-content{
+            height: 53rem;
+            width: 37rem;
+
+            border-radius: 0.5rem;
+
+            background-color: $gray-000;
+
+            padding: 1rem;
+            &>.header-popup{
+                height: 3rem;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+
+                border-bottom: 1px solid $gray-300;
+
+                &>.tiltle{
+                    width: 90%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+
+                    &>p{
+                        @include text-16-bold;
+                    }
+                }
+                &>.close{
+                    height: 100%;
+                    width: 10%;
+
+                    display: flex;
+                    align-items: center;
+
+                    &>.button-close:hover{
+                        background-color: $gray-300;
+                        cursor: pointer;
+                    }   
+                    &>.button-close{
+                        height: 2.2rem;
+                        width: 2.2rem;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        border-radius: 50%;
+
+                        background-color: $gray-200;
+                    }
+                }
+
+            }
+            &>.body-popup{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                &>.product-media{
+                    height: 20rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 1rem;
+
+
+                        &>img{
+                            height: 15rem;
+                            width: 20rem;
+                        }
+                        &>.product-name{
+                            height: 2rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: start;
+                            &>p{
+                                @include text-16-regular;
+                                font-size: 1.6rem;
+                            }
+                        }
+                }
+                
+                &>.capacity{
+                    
+                    &>.title{
+                        height: 3rem;
+                        position: relative;
+
+                        padding-left: 1rem;
+
+                        display: flex;
+                        align-items: center;
+
+
+                        &>.box{
+                            position: absolute;
+                            left: 0;
+                            top: 17%;
+
+                            height: 2rem;
+                            width: 0.5rem;
+                            background-color: $blue-1;
+
+
+                            
+                        }
+                        &>p{
+                            @include text-14-medium;
+                        }
+                    }
+                    &>.select-choice{
+                        padding: 0.5rem 0 0.5rem 1rem;
+                        display: flex;
+                        column-gap: 1rem;
+                        &>.box-choice{
+                            height: 2rem;
+                            width: auto;
+
+                            border: 1px solid $gray-300;
+                            border-radius: 0.3rem;
+
+                            cursor: pointer;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+                            &>p{
+                                @include text-14-regular;
+                                font-size: 14px;
+
+                            }
+                        }
+                    }
+
+                }
+                &>.color{
+                    &>.title{
+                        height: 3rem;
+                        position: relative;
+
+                        padding-left: 1rem;
+
+                        display: flex;
+                        align-items: center;
+
+
+                        &>.box{
+                            position: absolute;
+                            left: 0;
+                            top: 17%;
+
+                            height: 2rem;
+                            width: 0.5rem;
+                            background-color: $blue-1;
+
+
+                            
+                        }
+                        &>p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &>.select-choice{
+                        padding: 0.5rem 0 0.5rem 1rem;
+                        display: flex;
+                        column-gap: 1rem;
+                        &>.box-choice{
+                            height: 2rem;
+                            width: auto;
+
+                            border: 1px solid $gray-300;
+                            border-radius: 0.3rem;
+
+                            cursor: pointer;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+                            &>p{
+                                @include text-14-regular;
+                                font-size: 14px;
+
+                            }
+                        }
+                    }
+                }
+                &>.quantity{
+                    &>.title{
+                        height: 3rem;
+                        position: relative;
+
+                        padding-left: 1rem;
+
+                        display: flex;
+                        align-items: center;
+
+
+                        &>.box{
+                            position: absolute;
+                            left: 0;
+                            top: 17%;
+
+                            height: 2rem;
+                            width: 0.5rem;
+                            background-color: $blue-1;
+
+
+                            
+                        }
+                        &>p{
+                            @include text-14-medium;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &>.select-choice{
+                        &>.quantity{
+                            width: 30%;
+        
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+        
+                            &>p{
+                                font-size: 1.2rem;
+                            }
+        
+                            &>.box-left{
+                                width: 1.5rem;
+                                height: 1.6rem;
+        
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+        
+                                border: 1px solid #CFCFCF;
+                                cursor: pointer;
+        
+                            }
+                            &>input{
+                                width: 4rem;
+                                height: 1.5rem;
+                                border: none;
+                                outline: none;
+                                font-size: 1.2rem;
+                                text-align: center;
+        
+                                border-top: 1px solid #CFCFCF;
+                                border-bottom: 1px solid #CFCFCF;
+                            }
+                            &>.box-right{
+                                width: 1.5rem;
+                                height: 1.6rem;
+        
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+        
+                                border: 1px solid #CFCFCF;
+        
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            &>.footer-popup{
+                height: 7rem; 
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &>.button-buy:hover{
+                    background-color: $blue-1;
+                    cursor: pointer;
+                }
+                &>.button-buy{
+                    padding: 0.7rem 2rem 0.7rem 2rem;
+                    background-color: $orange-600;
+
+                    width: 10rem;
+                    height: auto;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 0.5rem;
+
+                    column-gap: 0.3rem;
+                    &>p{
+                        @include text-14-bold;
+                        color: $gray-000;
+                    }
+                }
+            }
+
+        }
+    }
+}
