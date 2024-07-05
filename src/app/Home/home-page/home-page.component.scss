@@ -1,21 +1,37 @@
 .home-page-container{
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
 
     &>.container{
         width: 100%;
+        height: 100vh;
         display: flex;
         align-items: center;
         flex-direction: column;
         &>.navbar-container{
             width: 100%;
+
         }
         &>.body-container{
             width: 100%;
+            height: calc(100vh - (6.5rem));
+
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            &>.body-container{
+                width: 100%;
+     
+    
+            }
+            &>.footer-container{
+                width: 100%;
+                height: 18rem;
+            }
+
         }
-        &>.footer-container{
-            width: 100%;
-        }
+
     }
 }

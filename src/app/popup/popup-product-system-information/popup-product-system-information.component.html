@@ -3,18 +3,35 @@
         <div class="main-popup-content">
             <div class="header-popup">
                 <div class="tiltle">
-                    <p>Thêm vào giỏ hàng</p>
+                    <p>Thông số kỹ thuật</p>
                 </div>
                 <div class="close">
                     <div class="button-close">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                            
                     </div>
                 </div>
             </div>
             <div class="body-popup">
-                
+                <div class="row-infor" *ngFor="let item of [].constructor(4)">
+                    <div class="title">
+                        <p>Màn hình</p>
+                        <div class="box">
+
+                        </div>
+                    </div>
+                    <div class="body-box-infor">
+                        <div class="row" *ngFor="let item of [].constructor(7)">
+                            <div class="title">
+                                <p>Công nghệ màn hình</p>
+                            </div>
+                            <div class="information-system">
+                                <p>OLED</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

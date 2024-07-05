@@ -74,5 +74,11 @@ export class ProductDetailComponent implements OnInit{
     })
   }
 
+  onClickShowPopupLike():void{
+    this.boxPopupDynamicService.popupLike({
+      product_id: 1
+    })
+  }
+
 
 }

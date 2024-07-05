@@ -1,0 +1,95 @@
+@import '../../../SCSS/mixins2';
+@import '../../../SCSS/variables';
+
+.comment{
+    background-color: $gray-000;
+    padding: 0.5rem 0 1.5rem 0 ;
+
+    &>.customer-name{
+        display: flex;
+        align-items: center;
+        &>p{
+              @include text-16-bold;  
+              color: $gray-900;
+        }
+        &>.customer-feedback{
+            display: flex;
+            align-items: center;
+
+
+            
+
+            &>.number-feedback{
+                @include text-16-bold;
+                color: $orange-900;
+                display: flex;
+                align-items: center;
+
+
+            }
+        }
+
+    }
+
+    &>.customer-review-content{
+        &>p{
+            @include text-14-regular;
+            color: $gray-900;
+
+            height: 2.3rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2rem;
+        }
+        &>.more{
+            &>p:hover{
+                color: $gray-600;
+            }
+            &>p{
+                text-align: end;
+                @include text-12-bold;
+                cursor: pointer;
+            }
+        }
+    }
+    &>.list-media-feedback{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        height: 80px;
+        width: 100%;
+        &>.media{
+            &>img{
+                height: 60px;
+                width: 100px;
+
+                border-radius: 5px;
+
+                cursor: pointer;
+            }
+        }
+    }
+    &>.reaction-comment-feedback{
+        display: flex;
+        align-items: center;
+        row-gap: 2rem;
+        &>.reaction{
+            display: flex;
+            align-items: center;
+            &>p{
+                @include text-12-regular;
+                color: $gray-600;
+            }
+        }
+        &>.evaluation-time{
+            &>p{
+                @include text-12-regular;
+                color: $gray-600;
+            }
+        }
+    }
+}

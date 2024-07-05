@@ -13,24 +13,55 @@
         width: 1024px;
 
         &>.product-name{
-            border-bottom: 1px solid #B5B5B5;
             display: flex;
-            column-gap: 0.5rem;
-            &>p{
-                font-weight: 700;
-                font-size: 1.6rem;
-                margin-bottom: 0.5rem;
-            }
-            &>.box-like{
-                &>svg{
-                    cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #B5B5B5;
+            &>.left{
+
+            display: flex;
+            column-gap: 0.3rem;
+                &>p{
+                    @include text-20-bold;
+                }
+                &>.box-like{
+                    display:flex;
+                    align-items: center;
+                    &>svg{
+                        cursor: pointer;
+                    }
+                }
+                &>.box-like:hover{
+                    &>svg{
+                        
+                    }
                 }
             }
-            &>.box-like:hover{
+            &>.likes:hover{
+                cursor: pointer;
+                border-bottom: 1px solid $turquoise-600;
+            }
+            &>.likes{
+                display: flex;
+                align-items: center;
+                border-bottom:1px solid $gray-000;
+  
+                &>p{
+                    
+                    @include text-14-regular;
+                    background: linear-gradient(to right, $turquoise-900, $orange-900);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    
+                    
+
+                }
                 &>svg{
                     
                 }
             }
+            
             
         }
         &>.media-product{
@@ -152,19 +183,18 @@
                 position: relative;
     
                 &>p{
-                    font-weight: 700;
-                    font-size: 1.2rem;
+                    @include text-18-bold;
                     margin-left: 1rem;
                 }
                 &>.rectango{
                     position: absolute;
-                    height: 1.5rem;
-                    width: 0.2rem;
+                    height: 1.7rem;
+                    width: 0.3rem;
     
-                    top: 25%;
+                    top: 20%;
                     left: 0;
     
-                    background-color: #79CDCD;
+                    background-color: $turquoise-600;
                 }
             }
             &>.price{
@@ -177,14 +207,13 @@
     
                 height: 2rem;
                 &>.reduced-price{
-                    font-weight: 500;
-                    font-size: 1.2rem;
+                    @include text-14-regular;
                     text-decoration-line: line-through;
                 }
                 &>.unchaged-price{
                     
                     color: #CD0000;
-                    @include text-16-bold;
+                    @include text-20-bold;
                 }
     
                 &>.share{
@@ -204,7 +233,7 @@
 
                     }
                     &>p{
-                        font-size: 1.2rem;
+                        @include text-16-regular;
                     }
                 }
             }
@@ -215,9 +244,9 @@
                 justify-content: center;
                 align-items: center;
                 
-                height: 5rem;
+                height: 7rem;
                 &>.button-buy:hover{
-                    background-color: #79CDCD;
+                    background-color: $orange-600;
                     cursor: pointer;
 
                 }
@@ -225,18 +254,19 @@
                     height: 3rem;
                     width: auto;
 
-                    padding:  0 0.5rem 0 0.5rem;
+                    padding:  0.5rem 1rem 0.5rem 1rem;
 
                     border-radius: 0.5rem;
 
-                    background-color: #FFCC33;
+                    background-color: $turquoise-600;
 
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    column-gap: 0.5rem;
                     &>p{
-                        font-size: 1.6rem;
-                        font-weight: 700;
+                        @include text-20-bold;
                         color: #ffff;
 
                     }
@@ -266,19 +296,130 @@
                 position: relative;
     
                 &>p{
+                    @include text-18-bold;
+                    margin-left: 1rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.7rem;
+                    width: 0.3rem;
+    
+                    top: 20%;
+                    left: 0;
+    
+                    background-color: $turquoise-600;
+                }
+            }
+            &>.body-product-information{
+                height: 30rem;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                padding: 0 1rem 0 2rem;
+                &>.information{
+                display: flex;
+                align-items: center;
+
+                column-gap: 2rem;
+                    &>.media-information{
+                        &>img{
+                            height: 27rem;
+                            width: 30rem;
+
+                            border-radius: 11px;
+                        }
+                    }
+                    &>.product-information{
+                        height: 100%;
+
+                        display: flex;
+                        flex-direction: column;
+
+                        row-gap: 1rem;
+                        &>.row-infor{
+                            display: flex;
+                            align-items: center;
+
+                            column-gap: 0.5rem;
+                            &>p{
+                                @include text-16-regular;
+                                
+                            }
+                        }
+                        &>.button-more{
+                            width: 100%;
+                            
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &>.button:hover{
+                                background-color: $orange-600;
+                                cursor: pointer;
+                            }
+                            &>.button{
+                                width: 12rem;
+                                height: 2.5rem;
+
+                                border-radius: 0.5rem;
+
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                
+                                background-color: $turquoise-600;
+                                &>p{
+                                    @include text-16-regular;
+
+
+                                    color: $gray-000;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        &>.product-system{
+            width: 100%;
+            height: auto;
+
+            border: 1px solid #CFCFCF;
+
+            margin-top: 4rem;
+            &>.title{
+                height: 3rem;
+                width: 1024px;
+    
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+    
+                background-color: #ffff;
+                
+                border-bottom: 1px solid #CFCFCF;
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
                     font-weight: 700;
                     font-size: 1.2rem;
                     margin-left: 1rem;
                 }
                 &>.rectango{
                     position: absolute;
-                    height: 1.5rem;
-                    width: 0.2rem;
+                    height: 1.7rem;
+                    width: 0.3rem;
     
-                    top: 25%;
+                    top: 20%;
                     left: 0;
     
-                    background-color: #79CDCD;
+                    background-color: $turquoise-600;
                 }
             }
             &>.box-infor-product{
@@ -292,7 +433,7 @@
                 }
                 &>.row-infor{
                     width: 100%;
-                    height: 3rem;
+                    height: 2.5rem;
 
                     display: flex;
                     align-items: center;
@@ -301,11 +442,12 @@
 
                     &>.title{
                         width: 20%;
-
-                        font-size: 1.2rem;
+                        @include text-16-regular;
+                        font-size: 16px;
                     }
                     &>.infor{
-                        font-size: 1.2rem;
+                        @include text-16-regular;
+                        font-size: 16px;
                         
                     }
                 }
@@ -321,11 +463,11 @@
                 column-gap: 0.5rem;
 
                 &>p:hover{
-                    color: #FFCC33;
+                    color: $orange-600;
                 }
 
                 &>p{
-                    color: #00008B;
+                    color: $turquoise-900;
                     font-size: 1.2rem;
                     cursor: pointer;
                     font-weight: 700;
@@ -334,6 +476,258 @@
                     align-items: center;
                 }
             }
+        }
+        &>.box-feedback-comments{
+            width: 100%;
+            height: auto;
+
+            border: 1px solid #CFCFCF;
+
+            margin-top: 4rem;
+            &>.title{
+                height: 3rem;
+                width: 1024px;
+    
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+    
+                background-color: #ffff;
+                
+                border-bottom: 1px solid #CFCFCF;
+                // padding-left: 1rem;
+    
+                position: relative;
+    
+                &>p{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    margin-left: 1rem;
+                }
+                &>.rectango{
+                    position: absolute;
+                    height: 1.7rem;
+                    width: 0.3rem;
+    
+                    top: 20%;
+                    left: 0;
+    
+                    background-color: $turquoise-600;
+                }
+            }
+            &>.box-feedback-comments{
+                padding: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                row-gap: 1rem;
+                &>.product-name{
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    &>p{
+                        @include text-20-bold;
+                    }
+                    &>.tag-feedback{
+                        display: flex;
+                        align-items: center;
+                        &>.number-feedback{
+                            @include text-14-regular;
+                            color: $orange-900;
+                            display: flex;
+    
+           
+                        }
+                        &>.quantity-feedback:hover{
+                            color: $turquoise-900;
+                            cursor: pointer;
+                        }
+                        &>.quantity-feedback{
+                            @include text-12-bold;
+                            color: $turquoise-600;
+                            display: flex;
+                            align-items: center;
+                        }
+                        &>.barrier{
+                            @include text-14-regular;
+                        }
+    
+                    }
+                }
+                
+                &>.media-comments{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+
+                    &>.media{
+
+
+                        &>img{
+                            height: 7rem;
+                            width: 11rem;
+
+                            border-radius: 1rem;
+                        }
+                    }
+                    &>.more-media{
+                        position: relative;
+                        &>img{
+                            height: 7rem;
+                            width: 11rem; 
+
+                            border-radius: 1rem;
+
+                        }
+                        &>.more{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            height: 7rem;
+                            width: 11rem; 
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            border-radius: 1rem;
+                            
+                            background-color: rgba(0, 0, 0, .7);
+                            &>p{
+                                color: $gray-200;
+                                @include text-12-bold;
+                            }
+                        }
+                    }
+                }
+                &>.tag-comments-feedback{
+                    display: flex;
+                    column-gap: 0.1rem;
+
+                    width: 100%;
+
+                    &>.comment{
+                        flex: 1;
+                        padding: 1rem;
+                        &>.title{
+                            height: 2rem;
+                            align-items: center;
+                            justify-content: flex-start;
+                            &>p{
+                                @include text-16-bold;
+                                color: $turquoise-600;
+                            }
+                        }
+                        &>.more-write-feedback{
+                            width: 100%;
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            &>.button-more-write-feedback{
+                                display: flex;
+                                justify-content: center;
+                                column-gap: 10px;
+                                &>.button{
+                                    &:hover{
+                                        cursor: pointer;
+                                        background-color: $turquoise-900;
+                                        &>p{
+                                            color: $gray-000;
+
+                                        }
+                                        &>svg{
+                                            &>path{
+                                                fill: $gray-000;
+                                                stroke: $gray-000;
+                                            }
+                                        }
+                                    }
+                                    height: 30px;
+                                    width: 170px;
+
+                                    border-radius: 5px;
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    border: 1px solid $turquoise-900;
+                                    &>p{
+                                        @include text-14-regular;
+                                        color: $turquoise-900;
+                                    }
+
+                                }
+                            }
+                            &>.write-feedback{
+                                height: 50px;
+                                width: 100%;
+
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                 &>.row-write-feedback{
+                                    height: 30px;
+                                    width: 90%;
+
+                                    display: flex;
+                                    align-items: center;
+
+                                    border-radius: 5px;
+                                    border: 1px solid $gray-900;
+                                    &>.input-feedback{
+                                        height: 90%;
+                                        width: 93%;
+
+                                        outline: none;
+                                        border: none;
+
+                                        padding-left: 5px;
+
+                                        @include text-14-regular;
+                                        color: $gray-700;
+
+                                    }
+                                    &>.button-send{
+                                        &:hover{
+                                            cursor: pointer;
+                                            &>svg{
+                                                &>path{
+                                                    fill: $gray-900;
+                                                }
+                                            }
+                                        }
+                                        height: 90%;
+                                        width: 7%;
+
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        &>svg{
+                                            &>path{
+                                                fill: $gray-700;
+                                            }
+                                        }
+                                    }
+                       
+                                 }
+                            }
+                        }
+                        
+                    }
+
+                }
+            }
+            
+            
         }
     }
 }

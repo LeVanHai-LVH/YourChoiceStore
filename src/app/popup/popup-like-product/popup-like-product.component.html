@@ -1,0 +1,42 @@
+<div class="container-popup">
+    <div class="container">
+        <div class="main-popup-content">
+            <div class="header-popup">
+                <div class="tiltle">
+                    <p>Yêu thích</p>
+                    <svg width="27" height="27" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42288 16.7653 7.99875 15 8Z" fill="#fff" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                        
+                </div>
+                <div class="close">
+                    <div class="button-close">
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                    </div>
+                </div>
+            </div>
+            <div class="body-popup">
+                <div class="row" *ngFor="let item of [].constructor(30)">
+                    <div class="avatar">
+                        <img src="../../../assets/avatar-default.png" alt="">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18.75C7.67936 18.75 5.45376 17.8281 3.81282 16.1872C2.17187 14.5462 1.25 12.3206 1.25 10C1.25 7.67936 2.17187 5.45376 3.81282 3.81282C5.45376 2.17187 7.67936 1.25 10 1.25C12.3206 1.25 14.5462 2.17187 16.1872 3.81282C17.8281 5.45376 18.75 7.67936 18.75 10C18.75 12.3206 17.8281 14.5462 16.1872 16.1872C14.5462 17.8281 12.3206 18.75 10 18.75ZM10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20Z" fill="url(#paint0_linear_64_6)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_64_6" x1="10" y1="0" x2="10" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00ACC1"/>
+                            <stop offset="0.57" stop-color="#FFB052"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                             
+                    </div>
+                    <div class="user-name">
+                        <p>Adward Dracus</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

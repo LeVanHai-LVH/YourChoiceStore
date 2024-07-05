@@ -20,8 +20,9 @@ import { BoxPopupDynamicComponent } from './Dynamic/box-popup-dynamic/box-popup-
 import { CartComponent } from './Home/cart/cart.component';
 import { LoginComponent } from './Auth/login/login.component';
 import { ResgisterComponent } from './Auth/resgister/resgister.component';
-import { PopupAddProductCartComponent } from './popup/popup-add-product-cart/popup-add-product-cart.component';
 import { PopupModule } from './popup/popup.module';
+import { CommentsModule } from './comments/comments.module';
+
 
 
 const appRoutes: Routes = [
@@ -76,10 +77,12 @@ const appRoutes: Routes = [
     CartComponent,
     LoginComponent,
     ResgisterComponent,
+
   ],
   imports: [
     BrowserModule,
     PopupModule,
+    CommentsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

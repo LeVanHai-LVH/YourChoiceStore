@@ -1,0 +1,13 @@
+@import '../../../SCSS/mixins2';
+@import '../../../SCSS/variables';
+
+.list-comments{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+
+    background-color: $gray-300;
+    &>.comment{
+
+    }
+}
