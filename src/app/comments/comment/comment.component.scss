@@ -46,12 +46,13 @@
         }
         &>.more{
             &>p:hover{
-                color: $gray-600;
+                color: $turquoise-900;
             }
             &>p{
                 text-align: end;
                 @include text-12-bold;
                 cursor: pointer;
+                color: $orange-900;
             }
         }
     }

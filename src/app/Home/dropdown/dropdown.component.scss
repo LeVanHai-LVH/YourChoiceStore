@@ -1,34 +1,66 @@
+@import '../../../SCSS/mimins3';
+@import '../../../SCSS/variables';
+
 .drowdown-container{
-    width: 17rem;
+    width: 31.5rem;
     height: auto;
     background-color: #ffff;
+    border:  2px solid $gray-500;
 
     padding: 1rem;
+    &>.row-filter{
 
-    border: 2px solid;
-    border-image: linear-gradient(to right, #000000, #ffffff);
-    &>.drowdown{
-        display: flex;
-        row-gap: 0.5rem;
-        column-gap: 0.5rem;
-        flex-wrap: wrap;
-        &>.card-brand{
-            display: flex;
-            justify-content: center;
-            background-color: #fff;
-            border: 1px solid #E8E8E8;
-
-            width: 5rem;
+        &>.title{
             height: 2rem;
+            width: 100%;
 
-            &>svg{
-                height: 2rem;
-                width: 5rem;
+            border-bottom: 1px solid $gray-300;
+            &>p{
+                @include text-18-bold;
             }
         }
-        &>.card-brand:hover{
-            border: 1px solid #B5B5B5;
-            cursor: pointer;
+        &>.body{
+            padding: 10px 10px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            row-gap: 10px;
+            column-gap: 10px;
+            &>.card:hover{
+                border: 1px solid $gray-500;
+            }
+            &>.card{
+                width: 150px;
+                height: 40px;
+
+                border: 1px solid $gray-200;
+
+                @include flex-al-ju;
+                &>p{
+                    @include text-16-regular;
+                }
+            }
         }
     }
+    &>.footer{
+        padding: 2rem 0;
+
+        @include flex-al-ju;
+        &>.button-search:hover{
+            background-color: $orange-600;
+        }
+        &>.button-search{
+            height: 2rem;
+            width: 6rem;
+
+            @include flex-al-ju;
+
+            border-radius: 3px;
+
+            background-color: $turquoise-600;
+            color: $gray-000;
+        }
+    }
+
 }

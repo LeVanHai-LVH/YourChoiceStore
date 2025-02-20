@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { BoxPopupDynamicService } from 'src/app/Dynamic/box-popup-dynamic/box-popup-dynamic.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
+  constructor(
+    private boxPopupDynamicService: BoxPopupDynamicService
+  ){}
 
   isChecked = false;
 
@@ -22,4 +27,12 @@ export class CartComponent {
   onClickMinus():void{
     this.isPrice -= 1;
   }
+
+  showPopupComfirmPayment(){
+    this.boxPopupDynamicService.popupComfirmPayment({
+      product_id: 1
+    })
+  }
+
+
 }

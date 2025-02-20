@@ -4,6 +4,10 @@ import { BoxPopupDynamicService } from './box-popup-dynamic.service';
 import { take } from 'rxjs';
 import { PopupAddProductCartComponent } from 'src/app/popup/popup-add-product-cart/popup-add-product-cart.component';
 import { PopupLikeProductComponent } from 'src/app/popup/popup-like-product/popup-like-product.component';
+import { PopupViewAllFeedbackComponent } from 'src/app/popup/popup-view-all-feedback/popup-view-all-feedback.component';
+import { PopupInformationProductDetailComponent } from 'src/app/popup/popup-information-product-detail/popup-information-product-detail.component';
+import { PopupConfirmPaymentComponent } from 'src/app/popup/popup-confirm-payment/popup-confirm-payment.component';
+import { PopupCompletePaymentComponent } from 'src/app/popup/popup-complete-payment/popup-complete-payment.component';
 
 @Component({
   selector: 'app-box-popup-dynamic',
@@ -28,6 +32,18 @@ export class BoxPopupDynamicComponent implements OnInit, OnDestroy{
   @ViewChild('popup_user_information', {read: ViewContainerRef, static: false})
   popup_user_information: ViewContainerRef | null = null;
 
+  @ViewChild('popup_view_all_feedback', {read: ViewContainerRef, static: false})
+  popup_view_all_feedback: ViewContainerRef | null = null;
+
+  @ViewChild('popup_information_product_detail', {read: ViewContainerRef, static: false})
+  popup_information_product_detail: ViewContainerRef | null = null;
+
+  @ViewChild('popup_information_product_detail', {read: ViewContainerRef, static: false})
+  popup_confirm_payment: ViewContainerRef | null = null;
+
+  @ViewChild('popup_information_product_detail', {read: ViewContainerRef, static: false})
+  popup_complete_payment: ViewContainerRef | null = null;
+
   private subs = new SubSink();
 
   ngOnDestroy(): void {
@@ -36,6 +52,10 @@ export class BoxPopupDynamicComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     this.onGetPopupAddProductCart();
     this.onGetPopupLike();
+    this.ongetPopupViewAllFeedback();
+    this.ongetPopupInformationProductDetail();
+    this.ongetPopupComfirmPayment();
+    this.ongetPopupCompletePayment();
   }
 
 
@@ -69,7 +89,41 @@ export class BoxPopupDynamicComponent implements OnInit, OnDestroy{
         this.loadDynamicComponentPopupAddProductCart(data)
       })
     )
-}
+  }
+
+  ongetPopupViewAllFeedback():void{
+    this.subs.add(
+      this.service.popup_view_all_feedback$.subscribe(data =>{
+        this.loadDynamicComponentPopupViewAllFeedback(data)
+      })
+    )
+  }
+
+  ongetPopupInformationProductDetail():void{
+    this.subs.add(
+      this.service.popup_information_product_detail$.subscribe(data =>{
+        this.loadDynamicComponentPopupInformationProductDetail(data)
+      })
+    )
+  }
+
+  ongetPopupComfirmPayment():void{
+    this.subs.add(
+      this.service.popup_comfirm_payment$.subscribe(data =>{
+        this.loadDynamicComponentPopupComfirmPayment(data)
+      })
+    )
+  }
+
+  ongetPopupCompletePayment():void{
+    this.subs.add(
+      this.service.popup_complete_payment$.subscribe(data =>{
+        this.loadDynamicComponentPopupCompletePayment(data)
+      })
+    )
+  }
+
+
 
   // async loadDynamicComponentPopupSystemInformation(data: {product_id: number}): Promise<void>{
   //   if(!this.popup_system_information_component_ref) return;
@@ -104,6 +158,46 @@ export class BoxPopupDynamicComponent implements OnInit, OnDestroy{
   async loadDynamicComponentPopupLike(data: {product_id: number}): Promise<void>{
     if(!this.popup_like) return;
     const component = this.popup_like.createComponent(PopupLikeProductComponent);
+    this.subs.add(
+      component.instance.close_popup.pipe(take(1)).subscribe(data =>{
+        component.destroy();
+      })
+    )
+  }
+
+  async loadDynamicComponentPopupViewAllFeedback(data: {product_id: number}): Promise<void>{
+    if(!this.popup_view_all_feedback) return;
+    const component = this.popup_view_all_feedback.createComponent(PopupViewAllFeedbackComponent);
+    this.subs.add(
+      component.instance.close_popup.pipe(take(1)).subscribe(data =>{
+        component.destroy();
+      })
+    )
+  }
+
+  async loadDynamicComponentPopupInformationProductDetail(data: {product_id: number}): Promise<void>{
+    if(!this.popup_information_product_detail) return;
+    const component = this.popup_information_product_detail.createComponent(PopupInformationProductDetailComponent);
+    this.subs.add(
+      component.instance.close_popup.pipe(take(1)).subscribe(data =>{
+        component.destroy();
+      })
+    )
+  }
+
+  async loadDynamicComponentPopupComfirmPayment(data: {product_id: number}): Promise<void>{
+    if(!this.popup_confirm_payment) return;
+    const component = this.popup_confirm_payment.createComponent(PopupConfirmPaymentComponent);
+    this.subs.add(
+      component.instance.close_popup.pipe(take(1)).subscribe(data =>{
+        component.destroy();
+      })
+    )
+  }
+
+  async loadDynamicComponentPopupCompletePayment(data: {product_id: number}): Promise<void>{
+    if(!this.popup_complete_payment) return;
+    const component = this.popup_complete_payment.createComponent(PopupCompletePaymentComponent);
     this.subs.add(
       component.instance.close_popup.pipe(take(1)).subscribe(data =>{
         component.destroy();

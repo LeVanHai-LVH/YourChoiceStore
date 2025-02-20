@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-filter.component.scss']
 })
 export class ListFilterComponent {
+  isClose = false;
+
+  showPopupFilter(){
+    this.isClose = !this.isClose;
+    console.log("bac")
+  }
 
 }

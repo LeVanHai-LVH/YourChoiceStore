@@ -1,0 +1,78 @@
+<div class="container-popup">
+    <div class="container">
+        <div class="main-popup-content">
+            <div class="header-popup">
+                <div class="tiltle">
+                    <p>Xác nhận thanh toán</p>
+                </div>
+                <div class="close">
+                    <div class="button-close" >
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                    </div>
+                </div>
+            </div>
+            <div class="body-popup">
+                <div class="row-add-voucher">
+                    <div class="col-voucher" *ngFor="let item of [].constructor(10)" (click)="onClickChangeCheckbox()">
+                        <div class="icon-money">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10C2.53043 10 3.03914 10.2107 3.41421 10.5858C3.78929 10.9609 4 11.4696 4 12C4 12.5304 3.78929 13.0391 3.41421 13.4142C3.03914 13.7893 2.53043 14 2 14V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V14C21.4696 14 20.9609 13.7893 20.5858 13.4142C20.2107 13.0391 20 12.5304 20 12C20 11.4696 20.2107 10.9609 20.5858 10.5858C20.9609 10.2107 21.4696 10 22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4ZM15.5 7L17 8.5L8.5 17L7 15.5L15.5 7ZM8.81 7.04C9.79 7.04 10.58 7.83 10.58 8.81C10.58 9.27943 10.3935 9.72964 10.0616 10.0616C9.72964 10.3935 9.27943 10.58 8.81 10.58C7.83 10.58 7.04 9.79 7.04 8.81C7.04 8.34057 7.22648 7.89036 7.55842 7.55842C7.89036 7.22648 8.34057 7.04 8.81 7.04ZM15.19 13.42C16.17 13.42 16.96 14.21 16.96 15.19C16.96 15.6594 16.7735 16.1096 16.4416 16.4416C16.1096 16.7735 15.6594 16.96 15.19 16.96C14.21 16.96 13.42 16.17 13.42 15.19C13.42 14.7206 13.6065 14.2704 13.9384 13.9384C14.2704 13.6065 14.7206 13.42 15.19 13.42Z" fill="#FF8B00"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="body-voucher">
+                            <div class="left-voucher">
+                                <div class="title">
+                                    <p>Giảm lên đến <span>10%</span></p>
+                                </div>
+                                <div class="expiry">
+                                    <p>19/18/2025</p>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="check-box">
+                                    <svg  *ngIf="isChecked == false"  width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3125 21.4844H4.6875C4.3767 21.4844 4.07863 21.3609 3.85886 21.1411C3.63909 20.9214 3.51562 20.6233 3.51562 20.3125V4.6875C3.51562 4.03906 4.03906 3.51562 4.6875 3.51562H20.3125C20.9594 3.51562 21.4844 4.03906 21.4844 4.6875V20.3125C21.4844 20.6233 21.3609 20.9214 21.1411 21.1411C20.9214 21.3609 20.6233 21.4844 20.3125 21.4844ZM5.85938 19.1406H19.1406V5.85938H5.85938V19.1406Z" fill="#CFCFCF"/>
+                                        </svg>
+                                    <svg  *ngIf="isChecked == true"  width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3ZM11.003 16L18.073 8.929L16.66 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z" fill="#FF8B00"/>
+                                        </svg>
+                                            
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-popup">
+                
+                <div class="row-money">
+                    <div class="row-money">
+                        <p>Tổng tiền: <span>1.000.000đ</span></p>
+                    </div>
+                    <div class="row-money">
+                        <p>Giảm giá: <span>1.000.000đ</span></p>
+                    </div>
+                    <div class="row-money">
+                        <p>Thành tiền: <span>1.000.000đ</span></p>
+                    </div>
+
+                   
+                </div>
+                <div class="row-button-pay-now">
+                    <div class="button" (click)="showPopupComplete()">
+                        <p>Thanh toán</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

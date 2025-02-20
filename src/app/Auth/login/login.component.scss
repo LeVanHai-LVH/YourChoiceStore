@@ -1,0 +1,260 @@
+@import "../../../SCSS/mimins3";
+@import "../../../SCSS/variables";
+
+.login-container {
+  height: 100%;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > .container {
+    height: 100%;
+    width: 67.5rem;
+
+    & > .row-container {
+      display: flex;
+
+      height: 38rem;
+
+      & > .col-image {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & > img {
+          width: 30rem;
+          height: 30rem;
+        }
+        & > p {
+          @include text-20-bold;
+        }
+      }
+      & > .col-box-login {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > .box-login {
+          width: 25rem;
+          height: 35rem;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          background-color: $turquoise-600;
+          & > .row-title {
+            height: 5rem;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > p {
+              @include text-20-bold;
+              color: $gray-000;
+            }
+          }
+          & > .row-form-input {
+            width: 25rem;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &>.col-input-email{
+                height: 4rem;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &>.input-email{
+                    height: 2rem;
+                    width: 324px;
+
+                    padding-left: 10px;
+
+                    background-color: $gray-000;
+
+                  @include flex-al-ju;
+                    &>input{
+                        width: 20rem;
+
+                        
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            &>.col-input-password{
+                height: 4rem;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &>.input-password{
+                    height: 2rem;
+
+                    overflow: hide;
+
+                    background-color: $gray-000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    padding-left: 10px;
+                    &>input{
+                        width: 17rem;
+
+                        outline: none;
+                        border: none;
+                    }
+                    &>.box-icon-hide{
+                        height: 2rem;
+                        width :3rem;
+
+                        cursor: pointer;
+
+
+                        &>.hide-show{
+                            height: 100%;
+                            width: 100%;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+          }
+          &>.row-button-login{
+            height: 5rem;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &>.button-login:hover{
+                color: $gray-000;
+
+                background-color: $orange-900;
+            }
+            
+            &>.button-login{
+
+                height: 2rem;
+                width: 7rem;
+
+                border-radius: 5px;
+
+                color: $turquoise-900;
+                background-color: $gray-000;
+
+                @include flex-al-ju;
+
+                cursor: pointer;
+
+                &>p{
+                    @include text-16-bold;
+                    font-family: 500;
+                }
+
+                
+            }
+          }
+          &>.row-other-login{
+            height: 10rem;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            &>.row-title{
+                height: 3rem;
+                width: 100%;
+
+                
+
+                @include flex-al-ju;
+
+                &>.row-left{
+                    height: 2px;
+                    width: 35%;
+
+                    background-color: $gray-000;
+                }
+                &>.title{
+                    height: 3rem;
+                    width: 20%;
+
+                    @include flex-al-ju;
+                    &>p{
+                        @include text-16-bold;
+                        color: $gray-000;
+                    }
+                }
+                &>.row-right{
+                    height: 2px;
+                    width: 35%;
+
+                    background-color: $gray-000;
+                }
+            }
+            &>.row-button-other-login{
+                height: 4rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                &>.col-button:hover{
+                    background-color: $gray-200;
+                }
+                &>.col-button{
+                    width: 9rem;
+                    height: 2rem;
+
+                    background-color: $gray-000;
+
+                    border-radius: 5px;
+
+                    @include flex-al-ju;
+
+                    cursor: pointer;
+                    &>p{
+                        @include text-16-regular;
+                    }
+                }
+            }
+          }
+          &>.row-register{
+            
+            &>p{
+                @include text-16-regular;
+                &>span:hover{
+                    color: $gray-000
+                }
+                &>span{
+                    @include text-16-bold;
+                   color: $orange-900; 
+                   cursor: pointer;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

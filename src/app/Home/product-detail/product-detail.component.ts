@@ -80,5 +80,17 @@ export class ProductDetailComponent implements OnInit{
     })
   }
 
+  onClickShowPopupViewAllFeedback():void{
+    this.boxPopupDynamicService.popupViewAllFeedback({
+      product_id: 1
+    })
+  }
+
+  onClickShowPopupInformationProductDetail():void{
+    this.boxPopupDynamicService.popupInformationProductDetail({
+      product_id: 1
+    })
+  }
+
 
 }

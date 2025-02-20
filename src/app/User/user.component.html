@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="user-container">
+        <div class="row-information-user">
+            <div class="col-avatar">
+                <img src="../../assets/avatar-default.png" alt="">
+            </div>
+            <div class="name-user">
+                <p>Le Van Hai</p>
+            </div>
+        </div>
+        <div class="row-toolbar-information">
+            <div class="row-toolbar">
+                <div class="col-toolbar" (click)="navigateInformation()" [ngClass]="{'active' : active == 'information'}">
+                    <p>Thông tin</p>
+                </div>
+                <div class="col-toolbar" (click)="navigateNotification()" [ngClass]="{'active' : active == 'notification'}">
+                    <p>Thông báo</p>
+                </div>
+                <div class="col-toolbar" (click)="navigateShipping()" [ngClass]="{'active' : active == 'shipping'}">
+                    <p>Đang vận chuyển</p>
+                </div>
+                <div class="col-toolbar" (click)="navigateComplete()" [ngClass]="{'active' : active == 'complete'}">
+                    <p>Thành công</p>
+                </div>
+                <div class="col-toolbar" (click)="navigateCancled()" [ngClass]="{'active' : active == 'canceled'}"> 
+                    <p>Đã hủy</p>
+                </div>
+                <div class="col-toolbar" (click)="navigateReturn()" [ngClass]="{'active' : active == 'return'}">
+                    <p>Trả hàng</p>
+                </div>
+            </div>
+
+            <router-outlet></router-outlet>
+
+        </div>
+        
+    </div>
+</div>

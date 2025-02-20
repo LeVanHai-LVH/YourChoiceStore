@@ -5,6 +5,9 @@ import { PopupProductSystemInformationComponent } from './popup-product-system-i
 import { PopupLikeProductComponent } from './popup-like-product/popup-like-product.component';
 import { PopupUserInformationComponent } from './popup-user-information/popup-user-information.component';
 import { PopupViewAllFeedbackComponent } from './popup-view-all-feedback/popup-view-all-feedback.component';
+import { PopupInformationProductDetailComponent } from './popup-information-product-detail/popup-information-product-detail.component';
+import { PopupCompletePaymentComponent } from './popup-complete-payment/popup-complete-payment.component';
+import { PopupConfirmPaymentComponent } from './popup-confirm-payment/popup-confirm-payment.component';
 
 
 @NgModule({
@@ -13,11 +16,12 @@ import { PopupViewAllFeedbackComponent } from './popup-view-all-feedback/popup-v
     PopupProductSystemInformationComponent,
     PopupLikeProductComponent,
     PopupUserInformationComponent,
-    PopupViewAllFeedbackComponent
+    PopupViewAllFeedbackComponent,
+    PopupInformationProductDetailComponent,
+    PopupCompletePaymentComponent,
+    PopupConfirmPaymentComponent
   ],
   imports: [
-  
-
   CommonModule
   ],
   exports: [
@@ -25,7 +29,11 @@ import { PopupViewAllFeedbackComponent } from './popup-view-all-feedback/popup-v
     PopupLikeProductComponent,
     PopupProductSystemInformationComponent,
     PopupUserInformationComponent,
-    PopupViewAllFeedbackComponent
+    PopupViewAllFeedbackComponent,
+    PopupInformationProductDetailComponent,
+    PopupCompletePaymentComponent,
+    PopupConfirmPaymentComponent
+
 
   ]
 })

@@ -1,34 +1,31 @@
 <div class="list-filter-container">
-    <div class="container">
-        <div class="row-filter">
-            <div class="box-filter">
-                <p>Hãng</p>
-                <svg width="15" height="15" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 11L24.071 3.929L31.142 11L24.072 18.071L17 11ZM30 24L37.071 16.929L44.142 24L37.072 31.071L30 24ZM4 24L11.071 16.929L18.142 24L11.072 31.071L4 24ZM17 37L24.071 29.929L31.142 37L24.072 44.071L17 37Z" fill="black" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
-                    
-                    <div class="dropdown" *ngIf="false">
-                        <app-dropdown class="app-dropdown"></app-dropdown>
-                    </div>
-            </div>
-            <div class="box-filter">
-                <p>Giá</p>
-                <svg width="15" height="15" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 11L24.071 3.929L31.142 11L24.072 18.071L17 11ZM30 24L37.071 16.929L44.142 24L37.072 31.071L30 24ZM4 24L11.071 16.929L18.142 24L11.072 31.071L4 24ZM17 37L24.071 29.929L31.142 37L24.072 44.071L17 37Z" fill="black" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                
-            </div>
-            <div class="box-filter">
-                <p>Ram</p>
-                <svg width="15" height="15" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 11L24.071 3.929L31.142 11L24.072 18.071L17 11ZM30 24L37.071 16.929L44.142 24L37.072 31.071L30 24ZM4 24L11.071 16.929L18.142 24L11.072 31.071L4 24ZM17 37L24.071 29.929L31.142 37L24.072 44.071L17 37Z" fill="black" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                
-            </div>
-            <div class="box-filter">
-                <p>Pin</p>
-                <svg width="15" height="15" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 11L24.071 3.929L31.142 11L24.072 18.071L17 11ZM30 24L37.071 16.929L44.142 24L37.072 31.071L30 24ZM4 24L11.071 16.929L18.142 24L11.072 31.071L4 24ZM17 37L24.071 29.929L31.142 37L24.072 44.071L17 37Z" fill="black" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                
-            </div>
-        </div>       
+  <div class="container">
+    <div class="row-filter">
+      <div
+        class="box-filter"
+        (click)="showPopupFilter()"
+        appClickOutSide
+        (clickOutSide)="isClose = false"
+      >
+        <p>Lọc</p>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 11H17V13H7V11ZM4 7H20V9H4V7ZM10 15H14V17H10V15Z"
+            fill="black"
+          />
+        </svg>
+
+     
+      </div>
+      <div class="dropdown" *ngIf="isClose">
+        <app-dropdown class="app-dropdown"></app-dropdown>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,0 +1,147 @@
+@import '../SCSS/variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@mixin text-23-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-23-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-22-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-22-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-21-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-21-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-20-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-20-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-18-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-18-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-16-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-16-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-14-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-14-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-12-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-12-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-10-regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-10-bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+@mixin flex-al-ju {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes opacity_scale_0_1 {
+    from {
+      scale: 0;
+      opacity: 0;
+    }
+  
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }

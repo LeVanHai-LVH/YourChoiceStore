@@ -1,4 +1,4 @@
-@import '../../../SCSS/mixins2';
+@import '../../../SCSS/mimins3';
 @import '../../../SCSS/variables';
 
 @media only screen and (min-width: 1000px) {
@@ -48,7 +48,7 @@
                     position: relative;
         
                     &>p{
-                        @include text-14-bold;
+                        @include text-18-bold;
                         color: $gray-900;
                         margin-left: 1rem;
                     }

@@ -1,4 +1,4 @@
-@import '../../../SCSS/mixins2';
+@import '../../../SCSS/mimins3';
 @import '../../../SCSS/variables';
 
 
@@ -24,21 +24,20 @@
         padding:1rem 1rem 0.5rem 1rem;
 
         &>.product-name{
-            @include text-14-regular;
+            @include text-18-bold;
 
         }
         &>.price{
             display: flex;
-            column-gap: 0.1rem;
+            column-gap: 0.02rem;
             &>.reduced-price{
-                font-weight: 500;
-                font-size: 1rem;
-                text-decoration-line: line-through;
+                @include text-16-regular;
             }
             &>.unchaged-price{
-                font-weight: 600;
                 color: #CD0000;
-                font-size: 1.1rem;
+
+                @include text-18-bold;
+
             }
         }
         &>.feedback{
@@ -47,7 +46,12 @@
                 justify-content: flex-start;
                 align-items: center;
                 &>p{
-
+                    @include text-14-regular;
+                    &>span{
+                        &>svg{
+                            
+                        }
+                    }
                 }
             }
             &>.row-star{
@@ -69,6 +73,9 @@
             border-radius: 0.3rem;
             &>.row{
                 display: flex;
+                &>p{
+                    @include text-16-regular;
+                }
             }
         }
 

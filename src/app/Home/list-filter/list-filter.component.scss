@@ -1,3 +1,6 @@
+@import '../../../SCSS/mimins3';
+@import '../../../SCSS/variables';
+
 .list-filter-container{
     width: 100%;
     display: flex;
@@ -8,20 +11,23 @@
 
         display: flex;
         align-items: center;
+        justify-content: flex-end;
 
         &>.row-filter{
 
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
 
-            column-gap: 2rem;
+            position: relative;
+
+
+
             &>.box-filter{
 
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                column-gap: 0.5rem;
     
                 height: 1rem;
                 width: auto;
@@ -31,22 +37,24 @@
                 border-radius: 0.5rem;
                 border: 1px solid #E8E8E8;
                 
-                position: relative;
+
+                margin-right: 2rem;
                 &>p{
-                    font-size: 1.2rem;
+                    @include text-18-regular;
                 }
                 &>svg{
                     
                 }
 
-                &>.dropdown{
-                    z-index: 1;
-                    position: absolute;
-                    top: 3rem;
-                    left: 50%;
-                    &>.app-dropdown{
-                        
-                    }
+                
+            }
+            &>.dropdown{
+                z-index: 1;
+                position: absolute;
+                top: 80%;
+                right: 80%;
+                &>.app-dropdown{
+                    
                 }
             }
 

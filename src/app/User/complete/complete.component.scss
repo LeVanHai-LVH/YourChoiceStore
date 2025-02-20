@@ -1,0 +1,176 @@
+@import "../../../SCSS/mimins3";
+@import "../../../SCSS/variables";
+
+.row-complete{
+    background-color: $gray-000;
+    padding: 10px;
+    &>.title{
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-bottom: 1px solid $gray-200;
+        &>p{
+            @include text-20-bold;
+        }
+    }
+    &>.complete{
+        background-color: $gray-200;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        &>.row-complete:hover{
+            background-color: $gray-100;
+            cursor: pointer;
+        }
+
+        &>.row-complete{
+
+            background-color: $gray-000;
+
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+
+            column-gap: 10px;
+
+            padding: 15px 0 15px 10px;
+
+            &>.row-information{
+                display: flex;
+                column-gap: 10px;
+
+                &>.avatar-product{
+                    &>img{
+                        height: 6rem;
+                        width: 6rem;
+                    }
+                }
+                &>.product-information{
+                    display: flex;
+                    flex-direction: column;
+                    &>.product-name{
+                        &>p{
+                            @include text-16-bold;
+                        }
+                    }
+                    &>.type{
+                        display: flex;
+                    }
+                &>.product-information{
+                    &>.content{
+                        &>p{
+                            @include text-16-regular;
+                        }
+                    }
+
+                    &>.date{
+                        &>p{
+                            @include text-12-bold;
+                        }
+                    }
+                }
+                }
+                
+            }
+            &>.row-paying{
+                display: flex;
+                align-items: center;
+                justify-content: end;
+
+                width: 100%;
+                height: 3rem;
+
+                border-bottom: 3px solid $gray-100;
+
+
+
+                &>.row-price{
+                    padding-right: 1rem;
+                    &>p{
+                        @include text-16-regular;
+
+                        &>span{
+                            @include text-16-bold;
+                            &>span{
+                                @include text-16-regular;
+                                
+                            }
+
+                        }
+                    }
+                }
+            }
+            &>.row-paying-detail{
+                width: 100%;
+                height: 5rem;
+                
+                display: flex;
+                align-items: center;
+                justify-content: end;
+
+                padding-right: 10px;
+                &>.product-detail:hover{
+                    background-color: $orange-900;
+                    cursor: pointer;
+                    
+                }
+                &>.repuchase:hover{
+                    background-color: $orange-900;
+                    cursor: pointer;
+                    
+                }
+
+
+                &>.button{
+                    padding: 0.4rem 2rem;
+
+                    @include flex-al-ju;
+
+                    background-color: $turquoise-600;
+
+                    margin-right: 10px;
+
+                    border-radius: 3px;
+                        
+                    &>p{
+                        @include text-16-bold;
+                        color:  $gray-000;
+                    }
+                }
+                &>.repuchase{
+                    background-color: $red-600;
+                }
+            }
+           
+        }
+        
+
+    }
+    &>.button-more{
+        height: 5rem;
+        width: 100%;
+
+        @include flex-al-ju;
+        &>.button:hover{
+            background-color: $orange-600;
+            cursor: pointer;
+            
+        }
+        &>.button{
+
+            height: 2rem;
+            width: 8rem;
+
+            background-color: $turquoise-600;
+            color: $gray-000;
+            border-radius: 3px;
+            @include flex-al-ju;
+            &>p{
+                @include text-16-bold;
+            }
+        }
+    }
+}

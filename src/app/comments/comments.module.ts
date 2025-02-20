@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommentComponent } from './comment/comment.component';
 import { ListCommentsComponent } from './list-comments/list-comments.component';
+import { InputCommentComponent } from './input-comment/input-comment.component';
 
 
 
 @NgModule({
   declarations: [
     CommentComponent,
-    ListCommentsComponent
+    ListCommentsComponent,
+    InputCommentComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { ListCommentsComponent } from './list-comments/list-comments.component';
   ],
   exports: [
     CommentComponent,
-    ListCommentsComponent
+    ListCommentsComponent,
+    InputCommentComponent
   ]
 })
 export class CommentsModule { }

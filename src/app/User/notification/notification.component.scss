@@ -1,0 +1,71 @@
+@import "../../../SCSS/mimins3";
+@import "../../../SCSS/variables";
+
+.row-notification{
+    background-color: $gray-000;
+    padding: 10px;
+    &>.title{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-bottom: 1px solid $gray-200;
+        &>p{
+            @include text-20-bold;
+        }
+    }
+    &>.notification{
+        background-color: $gray-200;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        &>.row-notification:hover{
+            background-color: $gray-100;
+            cursor: pointer;
+        }
+
+        &>.row-notification{
+
+            background-color: $gray-000;
+
+            display: flex;
+            align-items: start;
+
+            column-gap: 10px;
+
+            padding: 15px 0 15px 10px;
+            &>.avatar-product{
+                &>img{
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+        }
+
+    }
+    &>.button-more{
+        height: 5rem;
+        width: 100%;
+
+        @include flex-al-ju;
+        &>.button:hover{
+            background-color: $orange-600;
+            cursor: pointer;
+            
+        }
+        &>.button{
+
+            height: 2rem;
+            width: 8rem;
+
+            background-color: $turquoise-600;
+            color: $gray-000;
+            border-radius: 3px;
+            @include flex-al-ju;
+            &>p{
+                @include text-16-bold;
+            }
+        }
+    }
+}

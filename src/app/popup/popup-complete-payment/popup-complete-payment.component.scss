@@ -1,0 +1,131 @@
+@import '../../../SCSS/mimins3';
+@import '../../../SCSS/variables';
+
+.container-popup{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 100;
+
+
+    background-color: rgba(0,0,0,0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &>.container{
+        &>.main-popup-content{
+            height: 34rem;
+            width: 37rem;
+
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            background-color: $gray-000;
+
+            &>.header-popup{
+                height: 4rem;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+
+
+
+                border-bottom: 1px solid $gray-300;
+                background: linear-gradient(to right, $turquoise-600, $orange-600);
+                &>.tiltle{
+                    padding:  0 0 0 1rem;
+
+                    width: 90%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+
+                    &>p{
+                        @include text-22-bold;
+                        color: $gray-100;
+                    }
+                }
+                &>.close{
+                    height: 100%;
+                    width: 10%;
+
+                    display: flex;
+                    align-items: center;
+
+                    &>.button-close:hover{
+                        background-color: $gray-300;
+                        cursor: pointer;
+                    }   
+                    &>.button-close{
+                        height: 2.2rem;
+                        width: 2.2rem;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        border-radius: 50%;
+
+                        background-color: $gray-200;
+                    }
+                }
+
+            }
+            &>.body-popup{
+                height: 25rem;
+                width: 100%;
+                &>.row-payment-complete{
+                    height: 100%;
+                    width: 100%;
+
+                    @include flex-al-ju;
+                    flex-direction: column;
+                    &>.icon-complete{
+                        &>svg{
+                            height: 10rem;
+                            width: 10rem;
+                        }
+                    }
+                    &>p{
+                        @include text-16-bold;
+                        font-size: 3rem;
+                    }
+                }
+            }
+            &>.footer-popup{
+                height: 5rem;
+                width: 100%;
+
+                @include flex-al-ju;
+                &>.row-button{
+                    &>.button:hover{
+                        background-color: $turquoise-600;
+                        cursor: pointer;
+                    }
+                    &>.button{
+                        padding: 0.5rem 1rem;
+
+                        background-color: $orange-900;
+                        color: $gray-000;
+
+                        @include text-16-regular;
+                        
+                        border-radius: 3px;
+                    }
+                }
+            }
+
+        }
+    }
+}

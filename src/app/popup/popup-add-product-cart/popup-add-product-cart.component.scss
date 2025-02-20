@@ -1,4 +1,4 @@
-@import '../../../SCSS/mixins2';
+@import '../../../SCSS/mimins3';
 @import '../../../SCSS/variables';
 
 .container-popup{
@@ -21,6 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+
     &>.container{
         &>.main-popup-content{
             height: 53rem;
@@ -30,6 +32,8 @@
             overflow: hidden;
 
             background-color: $gray-000;
+
+            animation: opacity_scale_0_1 0.2s ease-out forwards;
 
             &>.header-popup{
                 height: 4rem;
@@ -142,7 +146,7 @@
                             
                         }
                         &>p{
-                            @include text-14-medium;
+                            @include text-16-regular;
                         }
                     }
                     &>.select-choice{
@@ -196,7 +200,7 @@
                             
                         }
                         &>p{
-                            font-size: 1.4rem;
+                            @include text-14-regular;
                         }
                     }
                     &>.select-choice{
@@ -250,20 +254,24 @@
                             
                         }
                         &>p{
-                            @include text-14-medium;
-                            font-size: 1.4rem;
+                            @include text-14-regular;
                         }
                     }
                     &>.select-choice{
                         &>.quantity{
-                            width: 30%;
+                            width: 120px;
         
                             display: flex;
                             align-items: center;
                             justify-content: center;
-        
+                            column-gap: 2px;
+
+                            border: 1px solid $gray-500;
+                            
+                            background-color: $gray-500;
                             &>p{
-                                font-size: 1.2rem;
+                                @include text-12-regular;
+
                             }
         
                             &>.box-left{
@@ -274,8 +282,9 @@
                                 align-items: center;
                                 justify-content: center;
         
-                                border: 1px solid #CFCFCF;
                                 cursor: pointer;
+                                background-color: $gray-000;
+
         
                             }
                             &>input{
@@ -285,11 +294,14 @@
                                 outline: none;
                                 font-size: 1.2rem;
                                 text-align: center;
+
+                                background-color: $gray-000;
         
-                                border-top: 1px solid #CFCFCF;
-                                border-bottom: 1px solid #CFCFCF;
+                                
                             }
                             &>.box-right{
+                                background-color: $gray-000;
+
                                 width: 1.5rem;
                                 height: 1.6rem;
         
@@ -297,7 +309,7 @@
                                 align-items: center;
                                 justify-content: center;
         
-                                border: 1px solid #CFCFCF;
+                               
         
                                 cursor: pointer;
                             }
@@ -330,7 +342,7 @@
 
                     column-gap: 0.3rem;
                     &>p{
-                        @include text-14-bold;
+                        @include text-16-bold;
                         color: $gray-000;
                     }
                 }

@@ -22,6 +22,11 @@ import { LoginComponent } from './Auth/login/login.component';
 import { ResgisterComponent } from './Auth/resgister/resgister.component';
 import { PopupModule } from './popup/popup.module';
 import { CommentsModule } from './comments/comments.module';
+import { UserModule } from './User/user.module';
+import { UserComponent } from './User/user.component';
+import { ClickOutSideDirective } from './Directives/click-out-side.directive';
+import { PopupConfirmPaymentComponent } from './popup/popup-confirm-payment/popup-confirm-payment.component';
+import { PopupCompletePaymentComponent } from './popup/popup-complete-payment/popup-complete-payment.component';
 
 
 
@@ -53,6 +58,18 @@ const appRoutes: Routes = [
     component: CartComponent
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: ResgisterComponent
+  },
+  {
+    path: 'user',
+    component: UserComponent,
+  },
+  {
     path: '**',
     redirectTo: '/home'
   }
@@ -77,12 +94,15 @@ const appRoutes: Routes = [
     CartComponent,
     LoginComponent,
     ResgisterComponent,
+    ClickOutSideDirective,
+
 
   ],
   imports: [
     BrowserModule,
     PopupModule,
     CommentsModule,
+    UserModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

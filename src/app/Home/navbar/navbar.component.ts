@@ -16,4 +16,12 @@ export class NavbarComponent {
   onClickNavigateHome():void{
     this.router.navigate([`/home`])
   }
+
+  onClickNavigateCart():void{
+    this.router.navigate([`/cart`])
+  }
+
+  onClickNavigateInformation():void{
+    this.router.navigate([`/user/information`])
+  }
 }
